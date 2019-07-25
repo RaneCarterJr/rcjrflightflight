@@ -1,0 +1,1560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Flight*</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/rounded-animated-navigation-master/css/style.css"> <!-- Resource style -->
+    <script src="/rounded-animated-navigation-master/js/modernizr.js"></script> <!-- Modernizr -->
+
+
+    <!-- <link rel="stylesheet" href="/animate.css-master/animate.min.css"> -->
+    <style>
+        body {
+            width: 100vw;
+            /* height: 500vh; */
+            /* background:gold; */
+            /* overflow: hidden; */
+
+
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #ffffff00;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(231, 231, 231);
+            border-radius: 1rem;
+
+        }
+
+
+
+        header {
+            width: 100%;
+            height: 75vh;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+
+        .cd-logo.active {
+            transform: translateY(-150px);
+        }
+
+        .cd-logo.disappear {
+            opacity: 0;
+        }
+
+        /* nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:70px;
+            line-height: 73px;
+            font-size: 13px;
+            font-weight: 400;
+            background-color: #07ffac;
+            box-shadow:0 0 5em rgb(34, 34, 34);
+            z-index: 5;
+            transition: 0.5s;
+        } */
+
+        /* nav.active {
+            transform: translateY(-70px);
+        } */
+
+
+
+
+        /* -------------------------------------------------------- */
+
+        .arc-bg {
+            width: 97vw;
+            height: 97vw;
+            /* background: #6e98b1; */
+            background: #48a6dc;
+            border-radius: 100% 0;
+            box-shadow: 0 0 1em rgba(109, 109, 109, 0.63), inset 0 0 1em rgb(49, 49, 49);
+            ;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            z-index: -2;
+            top: -40vw;
+            left: 0vw;
+            overflow: hidden;
+        }
+
+        header>#cloud01 {
+            width: 100%;
+            animation: cloudMove 40s infinite;
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        header #cloud02 {
+            width: 40vw;
+
+            animation: cloudMove 25s infinite;
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        @keyframes cloudMove {
+            0% {
+                top: 20vh;
+                left: -1500px;
+
+            }
+
+            /* 25% {
+                top: 35px;
+                left: -200px;
+                
+            }
+
+            50% {
+                top: 35px;
+                left:350px;
+                
+            }
+
+            75% {
+                top: 35px;
+                left: 550px;
+                
+            } */
+
+            100% {
+                top: 15vh;
+                left: 2300px;
+
+            }
+        }
+
+        /* ------------------------------------------------ */
+        .slider_wrap {
+            position: absolute;
+            top: 10vh;
+            /* left: 10vw; */
+            width: 100vw;
+            height: 100vh;
+
+            overflow: hidden;
+
+
+        }
+
+        .slider_pic {
+            width: 400vw;
+            position: absolute;
+            left: 0;
+            transition: 3s ease;
+            /* left:-300px; */
+        }
+
+        .slider_pic li {
+            /* max-height: 800px; */
+            flex: 1 0 0;
+            /* height: 400px; */
+        }
+
+        .slider_pic li img {
+            width: 100%;
+            /* height: 100%; */
+            object-fit: contain;
+            z-index: 3;
+        }
+
+        /* -------------------------------------------------- */
+
+        .container {
+            width: 100%;
+
+        }
+
+        .con-01 {
+            width: 100%;
+            height: 20vh;
+            margin: 2vh auto 5px auto;
+            padding: 0 0 10px 0;
+            /* background: #ddd; */
+            color: #000;
+            position: relative;
+            /* z-index: -20; */
+        }
+
+
+        /* 
+        .article {
+            width: 50vw;
+            margin: 20px;
+
+        }  */
+
+        .infoWrap {
+            min-width: 650px;
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .big {
+            position: absolute;
+            left: 0;
+            /* flex: 1 0 0; */
+            transition: 3s;
+        }
+
+        .dir i {
+            color: rgb(15, 15, 15);
+            font-size: 30px;
+        }
+
+        .dir i:hover {
+            color: rgb(0, 174, 255);
+        }
+
+        .dir_left {
+            position: absolute;
+            top: 9vh;
+            left: 0;
+        }
+
+        .dir_right {
+            position: absolute;
+            top: 9vh;
+            right: 0;
+        }
+
+        .fas {
+            font-size: 3vh;
+        }
+
+
+        /* ------------------------------------------------ */
+
+        .clouds {
+            width: 100%;
+            height: 70vh;
+            margin-top: 50px;
+            margin-bottom: -20vh;
+            overflow: hidden;
+            position: relative;
+
+
+        }
+
+        .clouds>img {
+            width: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .clouds>h6 {
+            font-size: 100px;
+            font-family: 'Fredoka One', cursive;
+            color: rgba(0, 0, 0, 0.808);
+            position: absolute;
+            top: 50%;
+            /* top:0; */
+        }
+
+        /* ------------------------------------------------------ */
+
+        .box {
+            /* background: #47a6dc; */
+            width: 100%;
+            min-height: 350px;
+            margin: 0 auto;
+
+            padding: 20px 0 90px 20px;
+            /* overflow-x: scroll; */
+            position: relative;
+
+        }
+
+        .cards {
+            margin: 0 0 2vw 20vw;
+            padding: 30px 0 60px 15vw;
+            display: flex;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            overflow-x: scroll;
+
+        }
+
+        .main-card {
+            width: 320px;
+            min-height: 450px;
+            font-family: 'Fredoka One', cursive;
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+
+            position: absolute;
+            left: 10vw;
+            z-index: 1;
+        }
+
+        .main-card1 {
+            background: linear-gradient(rgb(63, 194, 255), rgb(89, 13, 253));
+            color: #fff;
+        }
+
+        .main-card2 {
+            background: linear-gradient(rgb(247, 75, 124), rgb(98, 6, 195));
+            color: #fff;
+        }
+
+        .main-card3 {
+            /* background: linear-gradient(rgb(3, 191, 248), rgb(81, 249, 115)); */
+            background: linear-gradient(rgb(92, 255, 165),
+                rgb(2, 54, 165));
+            /* background: linear-gradient(rgb(248, 32, 61), rgb(239, 111, 51)); */
+
+            color: #fff;
+        }
+
+        .card {
+            background: #f3f3f3;
+            min-width: 300px;
+            /* min-height: 400px; */
+            /* width: 300px; */
+            height: 418px;
+            /* padding: 1.5rem; */
+            border-radius: 1rem;
+            padding: 1rem 0.8rem;
+            box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.6);
+            transition: .2s;
+            position: relative;
+        }
+
+        .card:not(:first-child) {
+            margin-left: -3rem;
+        }
+
+        .card:hover,
+        .card:focus-within {
+            transform: translateY(-1rem);
+        }
+
+        .card:hover~.card,
+        .card:focus-within~.card {
+            transform: translateX(3rem);
+
+        }
+
+        .card>img {
+            width: 270px;
+            height: auto;
+            text-align: center;
+            object-fit: contain;
+            border-radius: .3rem;
+
+        }
+
+        .card-text {
+            margin: 5px;
+            font-size: 15px;
+        }
+
+        .card-text h6 {
+            color: rgba(175, 174, 174, 0.836);
+        }
+
+        .view {
+            margin: 0;
+            padding: 0;
+            /* position: absolute;
+            bottom: 5%;
+            left: 25%; */
+            display: flex;
+            justify-content: space-around;
+
+            /* text-align: center; */
+        }
+
+        .fas {
+            font-size: 20px;
+        }
+
+        .cards-right,
+        .cards-left {
+            height: 171px;
+            margin: 15px;
+
+        }
+
+        /* ----------------------------------------------- */
+
+
+        .clouds02 {
+            width: 100%;
+            height: 80vh;
+            margin-top: -20vh;
+            margin-bottom: 0;
+            overflow: hidden;
+            position: relative;
+            /* margin-top: 80vh; */
+            /* margin: 80vh 0 -140vh 0; */
+            /* overflow: hidden; */
+
+
+        }
+
+        .clouds02>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+
+
+        .clouds02>h6 {
+            font-size: 80px;
+            font-family: 'Fredoka One', cursive;
+            color: rgb(4, 1, 46);
+            /* text-shadow: 0 0 0.2em rgb(255, 254, 241), 0 0 0.2em rgb(255, 249, 216); */
+            position: absolute;
+            top: 50%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 25% 25% 50%;
+            grid-template-rows: 10% 60% 30%;
+            grid-gap: 10px;
+            color: #fff;
+
+        }
+
+        .section {
+            width: 100%;
+            height: 100vh;
+            background: #223150;
+            overflow: hidden;
+
+        }
+
+        /* .section::before {
+            background: #fff;
+        } */
+
+        /* .item1 {
+            background: #48a6dc;
+
+        } */
+
+        .item1>img {
+
+            width: 100%;
+
+        }
+
+        .item2 {
+            /* background: #48a6dc; */
+            font-size: 70px;
+            line-height: 100%;
+            padding: 0 80px;
+
+        }
+
+        .item3 {
+            /* background: #48a6dc; */
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .item3>img {
+            width: 100%;
+            padding: 15px 0;
+        }
+
+
+
+        .item4>ul>li>a {
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.541);
+            font-family: 'Text Me One', sans-serif;
+        }
+
+        .item4>ul>li>a.active {
+            color: #fff;
+
+        }
+
+
+
+        .item4>ul>li>a:hover {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.541);
+            transition: 1s;
+        }
+
+        .item6 {
+            text-align: justify;
+            letter-spacing: normal;
+            text-align-last: left;
+        }
+
+
+        /* .item5 {
+            background: #48a6dc;
+
+        } */
+
+        .item6 {
+            /* background: #48a6dc; */
+            padding: 10px 50px;
+            /* border-radius: 10px; */
+        }
+
+
+        .colorbox {
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            object-fit: contain;
+        }
+
+        .colorbox>img {
+            width: 100%;
+        }
+
+        /* ----------------------------------------------- */
+        footer {
+            height: 45vw;
+            position: relative;
+        }
+
+        .airport {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .airport>img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .copyright {
+            width: 100%;
+            /* margin: 10px; */
+            position: absolute;
+            bottom: 0;
+        }
+
+
+
+        /* --------------------------------------------------- */
+
+        @media screen and (max-width: 1400px) and (min-width: 1150px) {
+
+            /* .arc-bg {
+                top: -35vw;
+            } */
+
+            .clouds {
+                margin-bottom: -35vh;
+            }
+
+            .clouds>h6 {
+                top: 40%;
+            }
+
+            .main-card {
+                position: absolute;
+                left: 5%;
+            }
+
+        }
+
+        /* ---------------------------------------------- */
+
+        @media screen and (max-width: 1150px) and (min-width: 775px) {
+
+            .clouds {
+                margin-bottom: -35vh;
+            }
+
+            .clouds>h6 {
+                top: 40%;
+                font-size: 60px;
+            }
+
+            .clouds02>h6 {
+                font-size: 60px;
+            }
+
+            .grid-container {
+
+                grid-template-columns: 30% 20% 50%;
+                grid-template-rows: 10% 40% 50%;
+                grid-gap: 10px;
+
+            }
+
+            /* .box {
+                position: unset;
+            } */
+
+            .cards {
+
+                padding: 100px 0 60px 0;
+                margin: 0 auto;
+                /* position: relative; */
+            }
+
+            /* .main-card {
+                display: flex;
+                position: unset;
+                z-index: 0;
+                
+            } */
+
+            .card {
+                display: flex;
+                z-index: 0;
+            }
+
+            /* .main-card {
+                width: 500px;
+                min-height: 5px;
+                padding: 1rem;
+                top: 0;
+                opacity: 0;
+            } */
+
+            .main-card{
+                display: none !important;
+            }
+
+        }
+
+        @media screen and (max-width:775px) {
+            .card {
+                display: flex;
+                z-index: 0;
+            }
+
+            .cards {
+
+                padding: 100px 0 60px 0;
+                margin: 0 auto;
+                /* position: relative; */
+            }
+
+            .main-card {
+                width: 500px;
+                min-height: 5px;
+                padding: 1rem;
+                top: 0;
+                opacity: 0;
+            }
+
+            .item2 {
+                /* background: #48a6dc; */
+                font-size: 50px;
+
+
+            }
+
+            .grid-container {
+
+                grid-template-columns: 30% 20% 50%;
+                grid-template-rows: 10% 35% 55%;
+                grid-gap: 10px;
+
+            }
+
+            .clouds>h6 {
+                top: 40%;
+                font-size: 50px;
+            }
+
+            .clouds02>h6 {
+                top: 40%;
+                font-size: 50px;
+            }
+
+            .infoWrap {
+                width: 250px;;
+            }
+            .big>a>img{
+                width: 200px;
+            }
+
+            /* nav{
+                left:
+            } */
+
+            .cd-nav-trigger{
+                right:20%;
+            }
+            .infoWrap{
+                display: none !important;
+            }
+            
+            .cd-overlay-nav{
+
+                right:20%;
+
+            }
+            .cd-overlay-content{
+                right:20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="01">
+
+        <a class="cd-logo" href="#0"><img src="images/Flight-logo.svg" alt="Logo"></a>
+
+
+        <nav>
+            <ul class="cd-primary-nav">
+                <li><a href="#01">HOME</a></li>
+                <li><a href="#02">PHOTO OF JETS</a></li>
+                <li><a href="#03">MOST POPULAR AIRPLANES</a></li>
+                <li><a href="#0">ABOUT US</a></li>
+            </ul>
+        </nav>
+
+
+
+        <div class="arc-bg">
+
+        </div>
+        <img id="cloud01" src="images/clouds.png" alt="">
+        <img id="cloud02" src="images/clouds.png" alt="">
+
+        <div class="slider_wrap">
+            <ul id="slider_pic" class="list-unstyled slider_pic d-flex ">
+                <!-- <li><img src="images/Cargolux 01.png" alt=""></li>
+                <li><img src="images/KML.png" alt=""></li>
+                <li><img src="images/KML03.png" alt=""></li>
+                <li><img src="images/KML02.png" alt=""></li> -->
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="container con-01 d-flex justify-content-center">
+        <a id="dir_left" class="dir dir_left d-flex justify-content-center align-items-center"><i
+                class="fas fa-caret-left"></i></a>
+
+        <div class="infoWrap d-flex ">
+
+
+            <div class="big d-flex">
+                <div class="info">
+                    <a href="https://www.cargolux.com/" target="blank"><img src="images/Cargolux-info.jpg" alt=""></a>
+                </div>
+
+
+                <div class="info">
+                    <a href="https://www.klm.com/home/tw/tw?WT.mc_id=c_tw_sea_google_brand_search_null_null&gclid=Cj0KCQjwrdjnBRDXARIsAEcE5YlfzPjwJ23DpVe8ehT8Px8iYSS_jbgEe6Nq8-WCjlo60K7OM7MjSpAaArVCEALw_wcB&gclsrc=aw.ds"
+                        target="blank"><img src="images/KML-info.jpg" alt=""></a>
+                </div>
+
+
+                <div class="info">
+                    <a href="https://www.atlasair.com/" target="blank"><img src="images/AtlasAir-info.jpg" alt=""></a>
+                </div>
+
+                <div class="info">
+                    <a href="https://www.china-airlines.com/" target="blank"><img src="images/china-info.jpg"
+                            alt=""></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a id="dir_right" class="dir dir_right d-flex justify-content-center align-items-center"><i
+                class="fas fa-caret-right"></i></a>
+
+
+    </div>
+
+    <div id="02" class="clouds">
+
+        <img src="images/clouds05.png" alt="">
+        <h6 class="mega my-element " data-paroller-factor="0.8" data-paroller-factor-lg="0.4"
+            data-paroller-factor-md="0.3" data-paroller-factor-sm="-0.2" data-paroller-factor-xs="-0.1"
+            data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform;">
+            <b>PHOTO OF JETS</b>
+
+        </h6>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+
+    <div class="box">
+        <div class="cards">
+            <div class="main-card main-card1 d-flex align-items-end show_in_desk ">
+                <h2>TODAY'S <br> MOST POPULAR </h2>
+            </div>
+            <div class="card">
+                <img src="images/001.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>B-18210</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-400 </p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>China Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 10K</i>
+                    <i class="fas fa-heart"> 6K</i>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="images/002.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>B-18006</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 777-309ER</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>China Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 9K</i>
+                    <i class="fas fa-heart"> 3400</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/003.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>VP-BCI</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-467F</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Sky Gates Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 7.5K</i>
+                    <i class="fas fa-heart"> 5K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/004.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>PH-BFV</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-406</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>KLMAirlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 5.6K</i>
+                    <i class="fas fa-heart"> 5300</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/005.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>HL7597</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 777-28E</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> Ukraine Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 5K</i>
+
+                    <i class="fas fa-heart"> 7580</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/006.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>D-ABVM</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-430</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> Lufthansa</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 4.8K</i>
+
+                    <i class="fas fa-heart"> 7K</i>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/007.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>9M-XXD</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Airbus A330-343</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> AirAsia X</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 4K</i>
+
+                    <i class="fas fa-heart"> 3500</i>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <br>
+        <br>
+        <!-- ---------------------------------------------------- -->
+        <div class="cards">
+            <div class="main-card main-card2 d-flex align-items-end show_in_desk">
+                <h2>PHOTO <br> OF THE WEEK </h2>
+            </div>
+            <div class="card">
+                <img src="images/008.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>N919CA</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-428</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> National Airlines </p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 11K</i>
+
+                    <i class="fas fa-heart"> 8K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/009.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>LX-OCV</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-4R7F</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> Cargolux Airlines </p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 9.6K</i>
+
+                    <i class="fas fa-heart"> 2K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/010.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>N780BA</p>
+                        <h6>AIRCRAFT</h6>
+                        <p> Boeing 747-409</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Boeing Company</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 8K</i>
+
+                    <i class="fas fa-heart"> 5K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/011.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>HL7418</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-48E</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Asiana Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 7.6K</i>
+
+                    <i class="fas fa-heart"> 5400</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/012.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>B-18007</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 777-309ER</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>China Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 6K</i>
+
+                    <i class="fas fa-heart"> 7K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/013.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>LX-JCV</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-4EVERF</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> Cargolux Airlines</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 4.5K</i>
+
+                    <i class="fas fa-heart"> 3K</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/014.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>HL7628</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Airbus A380-861</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Korean Air</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 4.5K</i>
+
+                    <i class="fas fa-heart"> 3K</i>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <!------------------------------------------------->
+
+
+        <div class="cards">
+            <div class="main-card main-card3 d-flex align-items-end show_in_desk">
+                <h2>LATEST PHOTOS <br>LAST 24 hrs</h2>
+            </div>
+            <div class="card">
+                <img src="images/015.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>N857GT</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-87UF</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> Polar Air Cargo</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 4.5K</i>
+
+                    <i class="fas fa-heart"> 3K</i>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="images/016.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>JA26MC</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Airbus A320-214</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Starflyer</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p> RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 3K</i>
+
+                    <i class="fas fa-heart"> 2300</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/017.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>VQ-BHE</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-4KZF</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Air Bridge Cargo</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p> RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 2.8K</i>
+
+                    <i class="fas fa-heart"> 3500</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/018.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>N608UP</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Boeing 747-84AF</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p> UPS</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p> RCTP</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 2.3K</i>
+
+                    <i class="fas fa-heart"> 6000</i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/019.jpg" alt="">
+                <div class="card-text d-flex">
+                    <div class="cards-right ">
+                        <h6>REGISTRATION</h6>
+                        <p>D-AIXC</p>
+                        <h6>AIRCRAFT</h6>
+                        <p>Airbus A350-941</p>
+
+                    </div>
+                    <div class="cards-left">
+                        <h6>AIRLINE</h6>
+                        <p>Lufthansa</p>
+                        <h6>PHOTO LOCATION</h6>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <i class="fas fa-eye"> 1.8K</i>
+
+                    <i class="fas fa-heart"> 800</i>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+    </div>
+    <!-- -------------------------------------------------- -->
+    <br>
+
+    <div id="03" class="clouds02">
+        <img src="images/clouds08.png" alt="">
+        <h6 class="mega my-element" data-paroller-factor="0.9" data-paroller-factor-lg="0.4"
+            data-paroller-factor-md="0.3" data-paroller-factor-sm="-0.2" data-paroller-factor-xs="-0.1"
+            data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform;">
+            <b>MOST POPULAR AIRPLANES</b>
+        </h6>
+    </div>
+
+    <!-- ------------------------------------------------ -->
+    <section class="section grid-container">
+        <div class="item1 d-flex justify-content-center align-items-center">
+            <img src="images/BoeingLogo.png" alt="">
+
+        </div>
+        <div class="item2">747-8</div>
+        <div class="item3">
+            <img src="images/747-01.png" alt="">
+        </div>
+        <div class="item4 d-flex justify-content-center align-items-center">
+            <ul class="d-flex ">
+                <li><a class="active" href="">01&nbsp;</a></li>
+                <li><a href="">02&nbsp;</a></li>
+                <li><a href="">03&nbsp;</a></li>
+            </ul>
+        </div>
+        <div class="item5"></div>
+        <div class="item6">
+            The Boeing 747 is an American wide-body commercial jet airliner and cargo aircraft. The first
+            wide-body airplane produced, it was the first plane dubbed a "Jumbo Jet". Its distinctive hump upper deck
+            along the forward part of the aircraft has made it one of the most recognizable aircraft. </div>
+    </section>
+
+    <section class="section grid-container">
+        <div class="item1 d-flex justify-content-center align-items-center">
+            <img src="images/BoeingLogo.png" alt="">
+
+        </div>
+        <div class="item2">777</div>
+        <div class="item3">
+            <img src="images/777.jpg" alt="">
+        </div>
+        <div class="item4 d-flex justify-content-center align-items-center">
+            <ul class="d-flex ">
+                <li><a href="">01&nbsp;</a></li>
+                <li><a class="active" href="">02&nbsp;</a></li>
+                <li><a href="">03&nbsp;</a></li>
+            </ul>
+        </div>
+        <div class="item5"></div>
+        <div class="item6">The Boeing 777 (Triple Seven) is a long-range wide-body twin-engine jet airliner developed
+            and manufactured by Boeing Commercial Airplanes. It is the world's largest twinjet and has a typical seating
+            capacity of 314 to 396 passengers, with a range of 5,240 to 8,555 nautical miles (9,704 to 15,844 km).
+        </div>
+    </section>
+
+    <section class="section grid-container">
+        <div class="item1 d-flex justify-content-center align-items-center">
+            <img src="images/AirbusLogo.png" alt="">
+
+        </div>
+        <div class="item2">A380</div>
+        <div class="item3">
+            <img src="images/A380.png" alt="">
+        </div>
+        <div class="item4 d-flex justify-content-center align-items-center">
+            <ul class="d-flex ">
+                <li><a href="">01&nbsp;</a></li>
+                <li><a href="">02&nbsp;</a></li>
+                <li><a class="active" href="">03&nbsp;</a></li>
+            </ul>
+        </div>
+        <div class="item5"></div>
+        <div class="item6">The Airbus A380 is the world's largest passenger airliner, a wide-body aircraft manufactured
+            by Airbus. Airbus studies started in 1988 and the project was announced in 1990 to challenge the dominance
+            of the Boeing 747 in the long haul market. The full-length double-deck aircraft has a typical seating
+            capacity of 525, though it is certified for up to 853 passengers. </div>
+    </section>
+
+    <div class="colorbox">
+        <img src="images/colorbox.png" alt="">
+
+    </div>
+
+
+    <!--     
+    <img class=" mega my-element" data-paroller-factor="0.9" data-paroller-factor-lg="0.4" data-paroller-factor-md="0.3"
+        data-paroller-factor-sm="-0.2" data-paroller-factor-xs="-0.1" data-paroller-type="foreground"
+        data-paroller-direction="horizontal" data-paroller-transition="transform;" src="images/ChinaAirline.png" alt=""> -->
+
+
+    <!-- -------------------------------------------------- -->
+    <footer>
+        <div class="airport">
+            <img src="images/airport03.png" alt="">
+        </div>
+        <div class="copyright d-flex justify-content-center ">©2019 FSW. All Rights Reserved</div>
+    </footer>
+    <span></span>
+    <!-- -------------------------------------------------- -->
+
+    <div class="cd-overlay-nav">
+        <span></span>
+    </div> 
+
+    <div class="cd-overlay-content">
+        <span></span>
+    </div> 
+
+    <a href="#0" class="cd-nav-trigger"><span class="cd-icon"></span></a>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="/rounded-animated-navigation-master/js/velocity.min.js"></script>
+
+    <script src="dist/jquery.paroller.min.js"></script>
+    <script src="/rounded-animated-navigation-master/js/main.js"></script>
+
+
+    <script>
+        $('#nav-icon1').click(function () {
+            $(this).toggleClass('open');
+        });
+        // --------------------------------------------
+        var sliderImg = ["Cargolux 01.png", "KML.png", "Atlas.png", "ChinaAirline.png"]
+
+        var Slidernum = 0;
+        // var SliderCount = $("#slider_pic li").length;
+        var SliderCount = sliderImg.length;
+        console.log(SliderCount);
+        var SliderLastIndex = SliderCount - 1;
+        // console.log(SliderLastIndex)
+        var sliderWidth = '100vw';
+
+
+        $(".slider_pic").width(sliderWidth * SliderCount)
+
+        for (i = 0; i < SliderCount; i++) {
+            let newRow = `<li><img src="images/${sliderImg[i]}" alt=""></li>`;
+            $("#slider_pic").append(newRow);
+            console.log(sliderImg[i]);
+        }
+
+        $("#dir_left").click(function () {
+            Slidernum = Slidernum - 1;
+            console.log(Slidernum);
+
+            if (Slidernum < 0) {
+                // Slidernum = 3;
+                Slidernum = 0;
+                // $("#dir_left >i").css("color", "green")
+            }
+            goSlider();
+            infoSlider();
+        })
+
+
+        $("#dir_right").click(function () {
+
+            Slidernum = Slidernum + 1;
+            console.log("Click");
+            console.log(Slidernum);
+
+            if (Slidernum > SliderLastIndex) {
+                // Slidernum = 0;
+                Slidernum = SliderLastIndex;
+                // $("#dir_right>i").css("color", "green")
+            }
+            goSlider();
+            infoSlider();
+        })
+
+        function goSlider() {
+            $("#slider_pic").css("left", 0 - Slidernum * 100 + "vw");
+        }
+
+        function infoSlider() {
+            $(".big ").css("left", 0 - Slidernum * 650 + "px")
+        };
+
+
+        // ------------------------------------------
+
+        $('.my-element').paroller();
+        $('.jumbotron').paroller();
+
+        $(window).scroll(function () {
+            let scrollTop = $(this).scrollTop();
+            // console.log(scrollTop);
+            $(".clouds").css("transform", "translateY(-" + scrollTop / 3 + "px)")
+
+        })
+
+        // ------------------------------------------
+
+        var lastScrollTop;
+        $(window).scroll(function () {
+            let scroll = $(this).scrollTop();
+            console.log(scroll);
+
+            // if (scroll > lastScrollTop) {
+            //     console.log("往下")
+            //     // $(".progress_wrap").css("transform", "translateY(0px)");
+            //     $(".cd-logo").addClass("active");
+            // } else if (scroll < lastScrollTop) {
+            //     console.log("往上")
+            //     // $(".progress_wrap").css("transform", "translateY(-40px)");
+            //     $(".cd-logo").removeClass("active");
+            // } 
+
+
+            if (scroll > 22 && 5700 > scroll) {
+                $(".cd-logo").addClass("disappear");
+                console.log("消失");
+            } else {
+                $(".cd-logo").removeClass("disappear");
+            }
+
+            lastScrollTop = scroll;
+            console.log(lastScrollTop);
+
+        });
+
+
+
+        $(window).resize(function () {
+            wdth = $(window).width();
+            console.log(wdth)
+            if (wdth < 1400 && wdth > 1200) {
+                $(".arc-bg").css("top", "-" + 40 + "vw")
+            } else if (wdth < 1200 && wdth > 900) {
+                $(".con-01").css("margin-top", "-" + wdth / 50 + "px")
+                $(".arc-bg").css("top", "-" + 36 + "vw")
+            } else if (wdth < 900 && wdth > 860) {
+                $(".con-01").css("margin-top", "-" + wdth / 6 + "px")
+                $("#02 h6").removeClass("mega");
+                $("#02 h6").removeClass("my-element");
+
+                $("#02 h6").addClass("d-flex justify-content-center");
+            } else if (wdth < 860 && wdth > 775) {
+                $(".con-01").css("margin-top", "-" + wdth / 5 + "px")
+                // $("#02").removeClass("mega my-element");
+                // $("#02").addClass("d-flex justify-content-center");
+            } else {
+                $(".con-01").css("margin-top", "2vh")
+            }
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
